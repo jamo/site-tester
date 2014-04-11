@@ -4,7 +4,7 @@ Bundler.require(:default)
 
 Capybara.run_server = false
 Capybara.current_driver = :selenium
-Capybara.app_host = 'http:materiaali.mooc.fi'
+Capybara.app_host = 'http://materiaali.mooc.fi'
 
 module MyCapybaraTest
   class Test
@@ -12,7 +12,7 @@ module MyCapybaraTest
     def test_google
       visit('/')
 
-      if page.has_content?("#nayttokoeOK").visible?
+      if page.has_content?("#nayttokoeOK")
         sleep 10
         click("#nayttokoeOK")
       end
